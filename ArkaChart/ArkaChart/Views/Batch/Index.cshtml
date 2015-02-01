@@ -1,0 +1,53 @@
+﻿@using ArkaChart.Domain.Mapping.Entities
+@using ArkaChart.Models
+@using ArkaChart.Tools
+@model ArkaChart.Models.FilesViewModel
+
+<div class="row">
+    <div class="alert alert-@TempData["MessageClass"]">@TempData["Message"]</div>
+</div>
+@if (Model != null && Model.Files.Count > 0) {
+<div class="row">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>@ArkaChart.Resources.Batch.FileName</th>
+                <th>@ArkaChart.Resources.Batch.Status</th>
+                <th>@ArkaChart.Resources.Batch.ProcessedLine</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (DataFileViewModel file in Model.Files) {
+                <tr>
+                    <td>@file.Name</td>
+                    <td>@file.GetStatus()</td>
+                    <td>
+                        @if (file.HasProcessingFiles()) {
+                            @Html.Label(file.ProcessingFile.LastLine.ToString())
+                        }
+                    </td>
+                    <td>
+                        @switch (file.Status) {
+                            case (int)StatusHelper.Processing:
+                                @Html.ActionLink(ArkaChart.Resources.Batch.Pause, "Pause", "Batch", new {idProcess = @file.ProcessingFile.Id}, new {@class ="btn btn-danger"})
+                                break;
+                            case (int)StatusHelper.Cancelled:
+                            case (int)StatusHelper.NeverProcessed:
+                                @Html.ActionLink(ArkaChart.Resources.Batch.Launch, "Launch", "Batch", new {filePath = @file.Name}, new {@class ="btn btn-success"})
+                                break;
+                            case (int)StatusHelper.Waiting:
+                                @Html.ActionLink(ArkaChart.Resources.Batch.Continue, "Continue", "Batch", new {idProcess = @file.ProcessingFile.Id}, new {@class ="btn btn-warning"})
+                                break;
+                      
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}
+<div class="row">
+   @Html.ActionLink(ArkaChart.Resources.Batch.ResetDatabase, "Reset", "Batch", null, new {@class ="btn btn-danger"}) 
+</div>

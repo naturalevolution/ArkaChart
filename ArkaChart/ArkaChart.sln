@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkaChart", "ArkaChart\ArkaChart.csproj", "{3E8C0E0E-EFA6-4E4B-972F-B311E9656DE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkaChart.Resources", "ArkaChart.Resources\ArkaChart.Resources.csproj", "{39884243-DA12-46D0-AFDB-7CBFBE95E54C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkaChart.Tests", "ArkaChart.Tests\ArkaChart.Tests.csproj", "{42EC2935-FF5A-4CE6-88A1-82790577DD73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkaChart.Domain", "ArkaChart.Domain\ArkaChart.Domain.csproj", "{192F50B8-5E2C-4866-8B61-E0BEE583FE76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkaChart.Tests.Data", "ArkaChart.Tests.Data\ArkaChart.Tests.Data.csproj", "{CFC01399-6B5F-4FA3-BEE5-9349E0AEC1E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArkaChart.Tools", "ArkaChart.Tools\ArkaChart.Tools.csproj", "{403D5957-F37C-4168-9953-AABC0539CD49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E8C0E0E-EFA6-4E4B-972F-B311E9656DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E8C0E0E-EFA6-4E4B-972F-B311E9656DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E8C0E0E-EFA6-4E4B-972F-B311E9656DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E8C0E0E-EFA6-4E4B-972F-B311E9656DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39884243-DA12-46D0-AFDB-7CBFBE95E54C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39884243-DA12-46D0-AFDB-7CBFBE95E54C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39884243-DA12-46D0-AFDB-7CBFBE95E54C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39884243-DA12-46D0-AFDB-7CBFBE95E54C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42EC2935-FF5A-4CE6-88A1-82790577DD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42EC2935-FF5A-4CE6-88A1-82790577DD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42EC2935-FF5A-4CE6-88A1-82790577DD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42EC2935-FF5A-4CE6-88A1-82790577DD73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{192F50B8-5E2C-4866-8B61-E0BEE583FE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192F50B8-5E2C-4866-8B61-E0BEE583FE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192F50B8-5E2C-4866-8B61-E0BEE583FE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{192F50B8-5E2C-4866-8B61-E0BEE583FE76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFC01399-6B5F-4FA3-BEE5-9349E0AEC1E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC01399-6B5F-4FA3-BEE5-9349E0AEC1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC01399-6B5F-4FA3-BEE5-9349E0AEC1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC01399-6B5F-4FA3-BEE5-9349E0AEC1E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403D5957-F37C-4168-9953-AABC0539CD49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403D5957-F37C-4168-9953-AABC0539CD49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403D5957-F37C-4168-9953-AABC0539CD49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403D5957-F37C-4168-9953-AABC0539CD49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

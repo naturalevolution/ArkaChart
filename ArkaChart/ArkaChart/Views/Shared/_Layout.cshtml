@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Styles.Render("~/Content/bootstrap/base")
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-inverse" role="navigation">
+                 <a class="navbar-brand" href="#">@ArkaChart.Resources.Navigation.ApplicationName</a>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink(ArkaChart.Resources.Navigation.Charts, "Index", "Chart")</li>
+                    <li>@Html.ActionLink(ArkaChart.Resources.Navigation.Datas, "Index", "Batch")</li>
+                </ul>
+            </nav>
+  
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>@ArkaChart.Resources.Navigation.ApplicationFooter</p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

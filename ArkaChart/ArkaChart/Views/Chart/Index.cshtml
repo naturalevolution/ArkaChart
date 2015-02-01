@@ -1,0 +1,79 @@
+﻿@model ArkaChart.Models.DatasModel
+<style type="text/css">
+    .row {
+        margin: 0 0 10px 0;
+    }
+</style>
+<script type="text/javascript">
+$(function () {
+        $('#containerByDate').highcharts({
+            title: {
+                text: "@Html.Raw(ArkaChart.Resources.Batch.Chart_Title_SumOfYear)",
+                x: -20
+            },
+            xAxis: { categories: [@Html.Raw(@Model.SumOfYear.GetX())] },
+            yAxis: {
+                title: { text: '@Html.Raw(ArkaChart.Resources.Batch.Values)' },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [@Html.Raw(@Model.SumOfYear.GetY())]
+        });
+    $('#containerByOrigin').highcharts({
+        title: {
+            text: "@Html.Raw(ArkaChart.Resources.Batch.Chart_Title_SumOfOrigin)",
+                x: -20
+            },
+            xAxis: { categories: [@Html.Raw(@Model.SumOfOrigin.GetX())] },
+            yAxis: {
+                title: { text: '@Html.Raw(ArkaChart.Resources.Batch.Values)' },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [@Html.Raw(@Model.SumOfOrigin.GetY())]
+        });
+    });
+</script>
+
+<div class="row">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>@ArkaChart.Resources.Batch.File</th>
+                <th>@ArkaChart.Resources.Batch.Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var element in Model.SumOfValues) {
+            <tr>
+                <td>@element.Source</td>
+                <td>@element.Value</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <div id="containerByDate" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+</div> 
+<div class="row">
+    <div id="containerByOrigin" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+</div>
